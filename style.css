@@ -6,7 +6,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100%;
+  /* min-height: 400px; */
+  clear: both;
 }
 
 .container {
@@ -83,9 +84,8 @@ a {
 }
 
 footer {
+  margin-top: auto;
   width: 100%;
   height: 60px;
-  /* bottom: 0;
-  position: absolute; */
   background: #c5d1eb;
 }
