@@ -1,13 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* Reset */
+/*
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 * {
   margin: 0;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+
 body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
   display: flex;
   align-items: center;
   justify-content: center;
   /* min-height: 400px; */
-  clear: both;
+  /* clear: both; */
 }
 
 .container {
@@ -20,27 +91,64 @@ body {
 }
 
 header {
-  color: #2f4550;
+  display: flex;
+  align-items: flex-end;
+  color: #454955;
+  background-color: #72b01d;
+  height: 100px;
+  box-shadow: 0px 10px 8px -4px #d3d3d3;
+}
+header h1 {
+  padding: 20px;
+  font-weight: 350;
+  font-size: 42px;
+}
+
+h1 span {
+  font-size: 26px;
+  margin-left: 15px;
 }
 
 .main-container {
-  display: flex;
-  flex-direction: row-reverse;
-  gap: 15px;
+  display: grid;
+  grid-template-columns: 0.33fr 1fr;
+  align-items: center;
+  justify-content: center;
+  gap: 100px;
+  margin: 30px 10% 0 10%;
+  min-height: 400px;
+}
+
+nav {
+  grid-column: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  left: 0;
+  bottom: 90px;
+  width: 300px;
+  padding: 10px 12px 10px 10px;
+  background-color: #ebf2fa;
+  color: #05668d;
+}
+
+nav h3 {
+  text-align: center;
+  margin: 10px 0 10px 0;
 }
 
 main {
-  margin-left: 20px;
+  grid-column: 2;
 }
 
-.toc {
-  position: -webkit-sticky;
-  position: sticky;
-  right: 0;
-  top: 0;
-  height: 400px;
-  display: inline-block;
-  border: solid 2px gainsboro;
+h2 {
+  margin-bottom: 25px;
+  font-size: 34px;
+  font-weight: 350;
+}
+
+p {
+  margin-bottom: 20px;
+  font-size: 18px;
 }
 
 /* nav ol {
@@ -52,16 +160,15 @@ nav li {
   padding: 10px;
 }
 
+li {
+  font-size: 18px;
+}
+
 /* nav li::before {
   counter-increment: section;
   content: counter(section) '.';
   margin-right: 5px;
 } */
-
-main {
-  width: 80%;
-  align-self: center;
-}
 
 h2 {
   color: #2f7233;
@@ -71,9 +178,19 @@ h2 {
   font-style: italic;
 }
 
+.sections {
+  background-color: #dff2f6;
+  margin: 15px;
+  padding: 10px 10px 10px 20px;
+  border-radius: 5px;
+  width: 500px;
+}
+
 .next {
   text-align: end;
   color: #ffa400;
+  margin: 15px;
+  font-size: 18px;
   font-weight: 600;
 }
 
@@ -83,9 +200,15 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  text-decoration: underline;
+}
+
 footer {
   margin-top: auto;
   width: 100%;
   height: 60px;
-  background: #c5d1eb;
+  padding: 20px;
+  background: #2f7233;
+  color: #fff;
 }
