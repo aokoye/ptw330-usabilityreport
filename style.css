@@ -191,6 +191,10 @@ main li:last-child {
   font-style: italic;
 }
 
+img {
+  margin-bottom: 20px;
+}
+
 .sections {
   background-color: #dff2f6;
   margin: 15px;
