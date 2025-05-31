@@ -250,6 +250,10 @@ table td {
   border: solid 2px;
 }
 
+blockquote br {
+  line-height: 30px;
+}
+
 footer {
   margin-top: auto;
   text-align: center;
